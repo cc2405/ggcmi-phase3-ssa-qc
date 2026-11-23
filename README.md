@@ -36,7 +36,7 @@ The check is read-only: no input file is renamed, rewritten, interpolated or rep
 install.packages(c("ncdf4","yaml"))
 ```
 
-- A first-season sowing calendar NetCDF file (see [Calendar file](#calendar-file)).
+- A first-season crop calendar NetCDF file (see [Calendar file](#calendar-file)).
 
 ## Input data layout
 
