@@ -83,12 +83,8 @@ Irrigation requirements (`pirnreq`) are expected for `firr` only.
 
 ### Calendar file
 
-The check needs a NetCDF file with the first-season optimal sowing calendar on the project's 0.5 degree grid. Model output is matched to it by coordinate value. The file must contain:
-
-- `optimal_sowing_doy`: sowing day of year; its valid cells define the target mask.
-- `optimal_sowing_mat`: optional; cells with a value above 365 are flagged as possible cross-year seasons in diagnostics.
-
-Only the first season is used. The calendar file is not included in this repository; obtain it from the project coordinators.
+The check needs a NetCDF file with the SSA-specific crop calendar data on the project's 0.5 degree grid. 
+Only the first season is used. The calendar file is not included in this repository; obtain it from project protocol via the [Globus link](https://app.globus.org/file-manager?origin_id=3125abe0-f6a4-11e9-8a5c-0e35e66293c2&origin_path=%2FAgMIP.input%2Fphase3%2FSSA_fertilization_risk%2FStep2-Risk+assessment%2Fcrop+calendar%2F)
 
 ## Configuration
 
