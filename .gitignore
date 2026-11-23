@@ -1,0 +1,21 @@
+# Local configuration (copy config.example.yaml to config.yaml and edit)
+config.yaml
+
+# Run logs and QC reports
+*.log
+output/
+
+# Model output and other NetCDF files must never be committed
+*.nc
+# Uncomment after the calendar file is cleared for publication:
+# !data/allmodels_optimal_sowing_combined.nc
+
+# R session files
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Operating system files
+.DS_Store
+Thumbs.db

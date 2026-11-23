@@ -1,0 +1,36 @@
+# Template for the local configuration.
+# Copy this file to config.yaml (same directory as the R scripts) and edit the values.
+# config.yaml is listed in .gitignore and is read at the start of every run.
+#
+# Every path below can be absolute or relative.
+# - Absolute: "D:/GGCMI_SSA/RiskAssess-output" (Windows) or "/path/to/GGCMI_SSA/RiskAssess-output" (Linux).
+# - Relative: resolved against the directory that contains GGCMI_phase3_SSA_check.R,
+#   for example "output" or "../GGCMI_SSA/RiskAssess-output".
+# Use forward slashes in paths, also on Windows.
+
+# Folder that holds one sub-folder per model.
+# Expected layout: <output_root>/<model>/<climate_forcing>/<N-level>/<file>.nc
+# Absolute or relative path.
+output_root: "/path/to/GGCMI_SSA/RiskAssess-output"
+
+# Model folder names to check (folder names, not paths), one list item per model.
+# The name must match the model folder. File names must start with the lowercase folder name,
+# for example folder "APSIMX-PIK" with files "apsimx-pik_*.nc".
+# Example with several models:
+#   models:
+#     - "APSIMX-PIK"
+#     - "DSSAT-CIRAD"
+#     - "STICS"
+# An empty list checks every top-level folder of output_root; list the models explicitly instead.
+models:
+  - "MODEL-NAME"
+
+# NetCDF file with the first-season optimal sowing calendar (variables optimal_sowing_doy and optimal_sowing_mat).
+# Absolute or relative path, for example "data/allmodels_optimal_sowing_combined.nc"
+# or "D:/GGCMI_SSA/calendar/allmodels_optimal_sowing_combined.nc".
+calendar_file: "data/allmodels_optimal_sowing_combined.nc"
+
+# Folder for QC reports (created if missing).
+# Reports are written to <report_root>/<model>/<YYYY-MM-DD>/run_HHMMSS_*.
+# Absolute or relative path, for example "output" (ignored by git) or "D:/GGCMI_SSA/RiskAssess-qc-report".
+report_root: "output"
